@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Welcome to my image Gallery</h1>
+    <h5>I hope you will like it  :-)</h5>
+
+    <div class="firstbox">
+        <div class="secondbox">
+            <img src="Pic-1.jpg" alt="pic1" onclick="maxImage(this)"/>
+            <img src="Pic-2.jpg" alt="pic2" onclick="maxImage(this)"/>
+            <img src="Pic-3.jpg" alt="pic3" onclick="maxImage(this)"/>
+            <img src="Pic-4.jpg" alt="pic4" onclick="maxImage(this)"/>
+            <img src="Pic-5.jpg" alt="pic5" onclick="maxImage(this)"/>
+           
+        </div>
+
+        <div class="thirdbox">
+            <img id="large-img-box" src="Wall-pic-1.jpg" alt="pic1"/>
+
+        </div>
+    </div>
+    <!--------------------   Javascript part   ----------------------->
+    <script>
+        function maxImage(productSmallImg){
+            var productFullImg=document.getElementById("large-img-box");
+            productFullImg.src=productSmallImg.src;
+        }
+    </script>
+</body>
+
+</html>
